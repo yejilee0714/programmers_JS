@@ -1,7 +1,7 @@
 function solution(start, end) {
     var answer = [];
-    for(let i =0 ; i <= (end-start) ; i++){
-        answer.push(start+i);   
+    for(start ; start <= end ; start++){
+        answer.push(start);   
     }
     return answer;
 }
