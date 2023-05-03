@@ -1,6 +1,4 @@
 function solution(my_string) {
     var answer = 0;
-    [...my_string].forEach(function(item){
-        (!isNaN(parseInt(item)))? answer += parseInt(item) : answer += 0; })
-    return answer;
+    return my_string.split("").filter((item) => !isNaN(item)).reduce((acc, cur) => Number(acc)+Number(cur), 0)
 }
