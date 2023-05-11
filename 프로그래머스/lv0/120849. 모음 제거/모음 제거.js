@@ -10,5 +10,7 @@ function solution(my_string) {
     //     }
     // }
     // return my_string.replace(/[aeiou]/g,'');
-    return [...my_string].filter(item => item !== 'a' && item !== 'e' && item !== 'i' && item !== 'o' && item !== 'u').join('')
+    // return [...my_string].filter(item => item !== 'a' && item !== 'e' && item !== 'i' && item !== 'o' && item !== 'u').join('')
+    const arr = ['a', 'e', 'i', 'o', 'u'];
+    return [...my_string].filter(v => !arr.includes(v)).join('');
 }
