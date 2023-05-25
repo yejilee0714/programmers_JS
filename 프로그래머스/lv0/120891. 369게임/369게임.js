@@ -1,3 +1,8 @@
 function solution(order) {
-    return [...String(order)].filter(item=> ["3", "6", "9"].includes(item)).length;
+  var answer = 0;
+  order.toString().split('').map((v) => {
+    if (parseInt(v) !== 0 && parseInt(v) % 3 === 0) 
+      answer += 1;
+  });
+  return answer;
 }
