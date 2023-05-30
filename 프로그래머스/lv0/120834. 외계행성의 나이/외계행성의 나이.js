@@ -1,5 +1,12 @@
 function solution(age) {
-    let arr = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    
-    return String(age).split("").map((v)=> arr[v]).join("");
+    var answer = '';
+    let str = age.toString();
+    let arr= ['a','b','c','d','e','f','g','h','i','j'];
+
+    for(let i=0; i<str.length;i++){
+        if(arr.indexOf(str)){
+            answer+=arr[str[i]]
+        }
+    } 
+		return answer;  
 }
